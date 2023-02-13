@@ -1,0 +1,27 @@
+export const inverseColors = {
+  primary: "onPrimary",
+  onPrimary: "primary",
+  primaryContainer: "onPrimaryContainer",
+  onPrimaryContainer: "primaryContainer",
+  secondary: "onSecondary",
+  onSecondary: "secondary",
+  secondaryContainer: "onSecondaryContainer",
+  onSecondaryContainer: "secondaryContainer",
+  tertiary: "onTertiary",
+  onTertiary: "tertiary",
+  tertiaryContainer: "onTertiaryContainer",
+  onTertiaryContainer: "tertiaryContainer",
+  error: "onError",
+  onError: "error",
+  errorContainer: "onErrorContainer",
+  onErrorContainer: "errorContainer",
+  background: "onBackground",
+  onBackground: "background",
+  surface: "onSurface",
+  onSurface: "surface",
+  surfaceVariant: "onSurfaceVariant",
+  onSurfaceVariant: "surfaceVariant",
+  outline: "surface",
+};
+
+export type InverseColorsType = keyof typeof inverseColors;
