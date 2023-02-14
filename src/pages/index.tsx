@@ -133,7 +133,7 @@ export default function Home() {
               return !execludeKeys.test(propertyName);
             }) as InverseColorsType[]
           ).map((v) => {
-            return <Color key={v} token={v} />;
+            return <Color key={v} hex={hexFromArgb(scheme[v])} token={v} />;
           })}
         </div>
       </main>
@@ -141,19 +141,20 @@ export default function Home() {
   );
 }
 
-function Color({ token }: { token: InverseColorsType }) {
+function Color({ token, hex }: { token: InverseColorsType; hex: string }) {
   return (
     <div
+      onClick={() => navigator.clipboard.writeText(hex)}
       style={{
         padding: 8,
         height: 48,
         backgroundColor: `var(--m3-${token})`,
         color: `var(--m3-${inverseColors[token]})`,
-        fontSize: "0.8rem",
         letterSpacing: 1.2,
       }}
     >
       <div>{token}</div>
+      <div>{hex}</div>
     </div>
   );
 }
